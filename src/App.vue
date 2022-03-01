@@ -1,7 +1,7 @@
 <template>
   <v-app>
  
-    <v-main>
+    <v-main class="black">
           <RickAndMorty />
 
     </v-main>
