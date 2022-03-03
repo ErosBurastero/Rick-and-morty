@@ -22,16 +22,16 @@
       >
         <v-img :src="character.image"></v-img>
 
-        <div class="black darken-4 white--text title d-flex justify-center">
+        <div class=" black--text cyan accent-2 display-1 d-flex justify-center">
           {{ character.name }}
         </div>
 
-        <div class="d-flex justify-center title green darken-4 white--text">
+        <div class="d-flex justify-center yellow lighten-1 title ">
           {{ "CHARACTERISTICS:  " + character.status }} —
           {{ character.species }}
         </div>
 
-        <div class="d-flex justify-center title light-blue darken-4">{{ "GENDER: " + character.gender }}</div>
+        <div class="d-flex justify-center title cyan accent-2 ">{{ "GENDER: " + character.gender }}</div>
       </v-card>
     </div>
   </div>
@@ -75,7 +75,5 @@ export default {
   gap: 10px 10px;
 }
 
-.card {
-  border: solid grey 2px;
-}
+ 
 </style>
