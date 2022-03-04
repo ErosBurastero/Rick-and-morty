@@ -1,37 +1,49 @@
 <template>
   <div>
     <div class="d-flex justify-center"
-    :class="{'d-flex justify-center' :$vuetify.breakpoint.smAndDown}" >
+    
+    >
       <v-img
+        :class="{'d-flex justify-center':$vuetify.breakpoint.smAndUp}"
         class="photo"
         src="title1.png"
-        max-height="500"
-        max-width="600"
+        max-height="400"
+        max-width="350"
       ></v-img>
+
     </div>
 
-    <div class="container">
+    <div class="d-flex  justify-center flex-wrap"
+    >
       <v-card
-        max-height="500"
-        max-width="400"
-        class="card my-5 ml-16"
-        :class="{ 'd-flex justify-center': $vuetify.breakpoint.smAndDown }"
+        width="700"
+        max-width="700"
+        class="ml-5 pa-10 my-5 light-blue accent-3"
+        :class="{'d-flex justify-center':$vuetify.breakpoint.smAndUp}"
         elevation="2"
         v-for="(character, index) in characters"
         :key="index"
       >
-        <v-img :src="character.image"></v-img>
+        <v-img max-height="300" max-width="350" :src="character.image"></v-img>
 
-        <div class=" black--text cyan accent-2 display-1 d-flex justify-center">
+    <div class="ml-16">
+          <div class=" black--text   display-1 font-italic">
           {{ character.name }}
         </div>
 
-        <div class="d-flex justify-center yellow lighten-1 title ">
-          {{ "CHARACTERISTICS:  " + character.status }} —
-          {{ character.species }}
+        <v-divider></v-divider>
+
+        <div class="title my-4 ml-3">CHARACTERISTICS: <br>
+         <div class="ml-6">  {{  character.status }} —
+          {{ character.species }}</div>  
         </div>
 
-        <div class="d-flex justify-center title cyan accent-2 ">{{ "GENDER: " + character.gender }}</div>
+        <v-divider></v-divider>
+        
+
+        <div class="title ml-8 my-4 ">{{ "GENDER: " + character.gender }}</div>
+    </div>
+    
       </v-card>
     </div>
   </div>
@@ -65,15 +77,11 @@ export default {
     this.fetchData();
   },
 };
+
+
 </script>
 
 <style>
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 10px 10px;
-}
 
  
 </style>
