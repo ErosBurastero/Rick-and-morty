@@ -8,17 +8,17 @@
         class="photo"
         src="title1.png"
         max-height="400"
-        max-width="350"
+        max-width="300"
       ></v-img>
 
     </div>
 
-    <div class="d-flex  justify-center flex-wrap"
+    <div class="d-flex justify-center flex-wrap"
     >
       <v-card
-        width="700"
+        
         max-width="700"
-        class="ml-5 pa-10 my-5 light-blue accent-3"
+        class="ml-2 pa-10 my-5 light-blue accent-3"
         :class="{'d-flex justify-center':$vuetify.breakpoint.smAndUp}"
         elevation="2"
         v-for="(character, index) in characters"
